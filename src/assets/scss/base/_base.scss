@@ -7,3 +7,12 @@
 body {
   font-family: $font-family;
 }
+
+// Home page main scss
+.home-container {
+  display: flex;
+}
+
+.others {
+  flex: 4;
+}

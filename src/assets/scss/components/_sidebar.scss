@@ -1,0 +1,52 @@
+.sidebar {
+  flex: 1;
+  height: calc(100vh - 64px);
+  background-color: $primary;
+  color: #fff;
+
+  &-wrapper {
+    padding: 20px;
+  }
+
+  &-menu {
+    margin-bottom: 10px;
+
+    &-title {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+  }
+
+  &-list {
+    list-style: none;
+
+    &-item {
+      padding: 7px;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 10px;
+
+      &:last-child {
+        margin-bottom: 14px;
+      }
+
+      &:hover,
+      &.active {
+        background-color: $primary-dark;
+      }
+
+      &-text {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.material-icon-sidebar {
+  font-size: 22px !important;
+  margin-right: 15px;
+}
