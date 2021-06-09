@@ -1,0 +1,10 @@
+.home {
+  flex: 4;
+  width: 100%;
+  background-color: rgb(252, 248, 247);
+
+  &-charts {
+    display: flex;
+    margin: 20px;
+  }
+}

@@ -1,0 +1,55 @@
+.featured {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 34px;
+
+  &-item {
+    flex: 1;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.87);
+    margin: 0 20px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: $card-box-shadow;
+    cursor: pointer;
+  }
+
+  &-title {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &-money {
+    &-container {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    font-size: 32px;
+    font-weight: 600;
+
+    &-change {
+      font-size: 14px;
+      font-weight: 700;
+      margin-left: 12px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-sub {
+    margin-top: 12px;
+    font-size: 14px;
+    color: $nav-icon-color;
+  }
+}
+
+.material-icon-featured {
+  font-size: 14px !important;
+  color: $rally-green;
+
+  &.negative {
+    color: $secondary-dark;
+  }
+}

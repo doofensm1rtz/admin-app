@@ -1,0 +1,16 @@
+.chart {
+  &-simple-line {
+    flex: 1.5;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: $card-box-shadow;
+  }
+
+  &-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+}

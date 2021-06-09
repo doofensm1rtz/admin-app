@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar-wrapper">
-        <div className="navbar-left">dashboard</div>
+        <div className="navbar-left">react-dashboard</div>
         <div className="navbar-right">
           <div className="navbar-icon">
             <ChatBubbleOutline />

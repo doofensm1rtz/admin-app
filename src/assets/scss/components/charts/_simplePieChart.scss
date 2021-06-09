@@ -1,0 +1,19 @@
+.chart {
+  &-pie {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: $card-box-shadow;
+    margin-left: 12px;
+
+    &-tooltip {
+      font-size: 14px;
+      border-radius: 6px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
