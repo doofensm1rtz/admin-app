@@ -35,6 +35,11 @@
       margin-left: 12px;
       display: flex;
       align-items: center;
+      color: $rally-green;
+
+      &.negative {
+        color: $secondary-dark;
+      }
     }
   }
 

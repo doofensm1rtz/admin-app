@@ -1,7 +1,9 @@
-import SimpleLineChart from "./charts/SimpleLineChart";
-import Featured from "./Featured";
+import SimpleLineChart from "../components/charts/SimpleLineChart";
+import Featured from "../components/Featured";
 import { userData } from "../lib/data/dummy";
-import SimplePieChart from "./charts/SimplePieChart";
+import SimplePieChart from "../components/charts/SimplePieChart";
+import WidgetSmall from "../components/widgets/WidgetSmall";
+import WidgetLarge from "../components/widgets/WidgetLarge";
 
 export default function Home() {
   return (
@@ -17,6 +19,10 @@ export default function Home() {
           grid
         />
         <SimplePieChart />
+      </div>
+      <div className="home-widgets">
+        <WidgetSmall />
+        <WidgetLarge />
       </div>
     </div>
   );

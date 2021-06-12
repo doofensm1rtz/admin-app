@@ -12,10 +12,14 @@
 @import "base/mixins";
 @import "base/margins";
 
-// Components
+// Components and Pages
 @import "components/navbar";
 @import "components/sidebar";
-@import "components/home";
 @import "components/featured";
 @import "components/charts/simpleLineChart";
 @import "components/charts/simplePieChart";
+@import "components/widgets/widgetSmall";
+@import "components/widgets/widgetLarge";
+
+@import "pages/home";
+@import "pages/userList";

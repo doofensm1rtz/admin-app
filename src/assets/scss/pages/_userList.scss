@@ -1,0 +1,31 @@
+.user-list {
+  flex: 4;
+  width: 100%;
+  background-color: rgb(252, 248, 247);
+}
+
+.col {
+  &-name {
+    display: flex;
+    align-items: center;
+
+    &-image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+  }
+}
+
+.col-actions-edit {
+  color: $primary;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.col-actions-delete {
+  color: $secondary-dark;
+  cursor: pointer;
+}

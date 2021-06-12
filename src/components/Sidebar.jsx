@@ -11,6 +11,7 @@ import {
   WorkOutlineRounded,
   ReportRounded,
 } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -19,10 +20,12 @@ export default function Sidebar() {
         <div className="sidebar-menu">
           <div className="sidebar-menu-title">Dashboard</div>
           <ul className="sidebar-list">
-            <li className="sidebar-list-item active">
-              <HomeRounded className="material-icon-sidebar" />
-              <span className="sidebar-list-item-text">Home</span>
-            </li>
+            <Link className="react-link" to="/">
+              <li className="sidebar-list-item active">
+                <HomeRounded className="material-icon-sidebar" />
+                <span className="sidebar-list-item-text">Home</span>
+              </li>
+            </Link>
             <li className="sidebar-list-item">
               <TimelineRounded className="material-icon-sidebar" />
               <span className="sidebar-list-item-text">Analytics</span>
@@ -36,10 +39,12 @@ export default function Sidebar() {
         <div className="sidebar-menu">
           <div className="sidebar-menu-title">Quick Menu</div>
           <ul className="sidebar-list">
-            <li className="sidebar-list-item">
-              <PersonRounded className="material-icon-sidebar" />
-              <span className="sidebar-list-item-text">Users</span>
-            </li>
+            <Link className="react-link" to="/users">
+              <li className="sidebar-list-item">
+                <PersonRounded className="material-icon-sidebar" />
+                <span className="sidebar-list-item-text">Users</span>
+              </li>
+            </Link>
             <li className="sidebar-list-item">
               <StorefrontRounded className="material-icon-sidebar" />
               <span className="sidebar-list-item-text">Products</span>

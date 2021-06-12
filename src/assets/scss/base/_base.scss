@@ -12,3 +12,9 @@ body {
 .main-container {
   display: flex;
 }
+
+// removing styles from react Link component
+.react-link {
+  color: inherit;
+  text-decoration: none;
+}
