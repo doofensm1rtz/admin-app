@@ -38,7 +38,7 @@ export default function SimplePieChart() {
             cx="50%"
             cy="50%"
             innerRadius={110}
-            outerRadius={130}
+            outerRadius={125}
             fill="#8884d8"
             paddingAngle={5}
             dataKey="value"
