@@ -14,3 +14,11 @@
     margin-left: 10px;
   }
 }
+
+@include responsive($small-break) {
+  .chart {
+    &-simple-line {
+      margin-bottom: 20px;
+    }
+  }
+}

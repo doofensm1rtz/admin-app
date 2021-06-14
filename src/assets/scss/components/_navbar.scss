@@ -65,3 +65,28 @@
   object-fit: cover;
   cursor: pointer;
 }
+
+.navbar-left-mobile {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  &-icon {
+    font-size: 34px !important;
+    color: $primary-dark !important;
+    cursor: pointer;
+  }
+}
+
+@include responsive($small-break) {
+  .profile-image {
+    display: none;
+  }
+}

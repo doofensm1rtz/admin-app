@@ -68,3 +68,11 @@
   color: $primary;
   margin-right: 5px;
 }
+
+@include responsive($small-break) {
+  .widget {
+    &-small {
+      margin-right: 0;
+    }
+  }
+}

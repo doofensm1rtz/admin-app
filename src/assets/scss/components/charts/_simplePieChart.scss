@@ -17,3 +17,11 @@
     }
   }
 }
+
+@include responsive($small-break) {
+  .chart {
+    &-pie {
+      margin-left: 0;
+    }
+  }
+}

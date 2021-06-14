@@ -1,4 +1,4 @@
-.sidebar {
+.mobile-sidebar {
   flex: 1;
   height: calc(100vh - 64px);
   background-color: $primary;
@@ -47,13 +47,15 @@
   }
 }
 
-.material-icon-sidebar {
+.material-icon-mobile-sidebar {
   font-size: 22px !important;
   margin-right: 15px;
 }
 
 @include responsive($small-break) {
-  .sidebar {
-    display: none;
+  .mobile-sidebar {
+    position: fixed;
+    width: 280px;
+    z-index: 999;
   }
 }

@@ -13,3 +13,15 @@
     display: flex;
   }
 }
+
+@include responsive($small-break) {
+  .home {
+    &-charts {
+      flex-direction: column;
+    }
+
+    &-widgets {
+      flex-direction: column;
+    }
+  }
+}

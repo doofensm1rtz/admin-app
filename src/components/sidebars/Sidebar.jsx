@@ -21,7 +21,7 @@ export default function Sidebar() {
           <div className="sidebar-menu-title">Dashboard</div>
           <ul className="sidebar-list">
             <Link className="react-link" to="/">
-              <li className="sidebar-list-item active">
+              <li className="sidebar-list-item">
                 <HomeRounded className="material-icon-sidebar" />
                 <span className="sidebar-list-item-text">Home</span>
               </li>

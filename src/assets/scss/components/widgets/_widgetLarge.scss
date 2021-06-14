@@ -83,3 +83,13 @@
     }
   }
 }
+
+@include responsive($small-break) {
+  .widget {
+    &-large {
+      overflow-x: auto;
+      margin-left: 0;
+      margin-top: 14px;
+    }
+  }
+}

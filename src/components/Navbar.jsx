@@ -1,21 +1,38 @@
 import Notifications from "../components/modals/Notifications";
 import Messages from "../components/modals/Messages";
+import useWindowDimensions from "../lib/custom-hooks/useWindowDimensions";
 import { useState } from "react";
 import {
   ChatBubbleOutline,
   NotificationsNoneRounded,
   Settings,
+  MenuRounded,
+  CloseRounded,
 } from "@material-ui/icons";
 
-export default function Navbar() {
+export default function Navbar({ isSidebarOpened, setIsSidebarOpened }) {
   const [showNotification, setShowNotification] = useState(false);
   const [showMessages, setShowMessages] = useState(false);
+  const { width } = useWindowDimensions();
 
   return (
     <>
       <div className="navbar">
         <div className="navbar-wrapper">
-          <div className="navbar-left">react-dashboard</div>
+          {width > 780 ? (
+            <div className="navbar-left">react-dashboard</div>
+          ) : (
+            <div
+              className="navbar-left-mobile"
+              onClick={() => setIsSidebarOpened(!isSidebarOpened)}
+            >
+              {!isSidebarOpened ? (
+                <MenuRounded className="navbar-left-mobile-icon" />
+              ) : (
+                <CloseRounded className="navbar-left-mobile-icon" />
+              )}
+            </div>
+          )}
           <div className="navbar-right">
             <div className="navbar-icon" onClick={() => setShowMessages(true)}>
               <ChatBubbleOutline />

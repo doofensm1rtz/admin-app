@@ -5,7 +5,6 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  YAxis,
 } from "recharts";
 
 export default function SimpleLineChart({
@@ -23,7 +22,6 @@ export default function SimpleLineChart({
         <LineChart data={data}>
           {grid && <CartesianGrid strokeDasharray="5 5" />}
           <XAxis dataKey={XdataKey} stroke="#002984" />
-          <YAxis dataKey={YDataKey} stroke="#002984" />
           <Tooltip />
           <Line
             type="monotone"

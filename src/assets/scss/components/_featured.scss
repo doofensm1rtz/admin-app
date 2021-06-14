@@ -58,3 +58,14 @@
     color: $secondary-dark;
   }
 }
+
+@include responsive($small-break) {
+  .featured {
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    &-item {
+      margin-top: 14px;
+    }
+  }
+}

@@ -8,20 +8,21 @@ export default function useComponentVisible(initialIsVisible, setVisibility) {
   const handleHideDropdown = (event) => {
     if (event.key === "Escape") {
       setIsComponentVisible(false);
-      setVisibility(false);
+      setVisibility && setVisibility(false);
     }
   };
 
   const handleClickOutside = (event) => {
     if (ref.current && !ref.current.contains(event.target)) {
       setIsComponentVisible(false);
-      setVisibility(false);
+      setVisibility && setVisibility(false);
+      !setVisibility && console.log(event.target, ref);
     }
   };
 
   const handleMouseScroll = (event) => {
     setIsComponentVisible(false);
-    setVisibility(false);
+    setVisibility && setVisibility(false);
   };
 
   useEffect(() => {
