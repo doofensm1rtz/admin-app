@@ -29,3 +29,10 @@
   color: $secondary-dark;
   cursor: pointer;
 }
+
+@include responsive($small-break) {
+  .user-list {
+    height: calc(100vh - 64px);
+    overflow-x: auto;
+  }
+}
