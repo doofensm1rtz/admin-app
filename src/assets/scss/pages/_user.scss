@@ -1,0 +1,212 @@
+.user {
+  flex: 4;
+  padding: 20px;
+  width: 100%;
+  background-color: rgb(252, 248, 247);
+
+  &-title {
+    font-size: 24px;
+    font-weight: 600;
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-create-btn {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: $rally-green;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &-main-container {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &-display {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: $card-box-shadow;
+    margin-right: 20px;
+    padding: 20px;
+
+    &-top {
+      display: flex;
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &-username {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    &-usertitle {
+      font-size: 13px;
+      color: #555;
+    }
+
+    &-image {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+
+      &-title {
+        font-size: 14px;
+        color: #555;
+        font-weight: 500;
+        margin: 20px 0 12px 0;
+      }
+
+      &-info {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        color: $black;
+
+        span {
+          font-size: 15px;
+          line-height: 26px;
+        }
+      }
+
+      &-icon {
+        font-size: 18px !important;
+        margin-right: 16px;
+        color: $black !important;
+      }
+    }
+  }
+
+  &-update {
+    flex: 2;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: $card-box-shadow;
+    padding: 20px;
+
+    &-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    &-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-left {
+      flex: 2;
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      font-size: 15px;
+
+      input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $grey;
+        margin-bottom: 12px;
+        color: #555;
+        padding: 8px 0 4px 2px;
+      }
+      input:focus {
+        border-bottom: 1px solid $rally-green;
+      }
+    }
+
+    &-right {
+      flex: 3;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-image {
+      width: 160px;
+      height: 140px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    &-btn {
+      margin-top: 100px;
+      padding: 5px 8px;
+      background: $blue;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      color: $white;
+      cursor: pointer;
+      align-self: flex-end;
+    }
+  }
+
+  &-upload-image {
+    &-btn {
+      margin-top: 20px;
+      background-color: $blue;
+      color: $white !important;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+
+      label {
+        padding: 5px 8px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+
+    &-icon {
+      margin-right: 8px;
+      font-size: 20px !important;
+      cursor: pointer;
+    }
+  }
+}
+
+@include responsive($small-break) {
+  .user {
+    &-main-container {
+      flex-direction: column;
+    }
+
+    &-display {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &-update {
+      &-container {
+        flex-direction: column;
+      }
+
+      &-right {
+        margin-top: 20px;
+      }
+    }
+  }
+}
