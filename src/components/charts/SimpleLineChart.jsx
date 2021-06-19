@@ -18,7 +18,7 @@ export default function SimpleLineChart({
   return (
     <div className="chart-simple-line">
       <h2 className="chart-title">{title}</h2>
-      <ResponsiveContainer width="100%" aspect={2 / 1}>
+      <ResponsiveContainer width="99%" aspect={3 / 1}>
         <LineChart data={data}>
           {grid && <CartesianGrid strokeDasharray="5 5" />}
           <XAxis dataKey={XdataKey} stroke="#002984" />

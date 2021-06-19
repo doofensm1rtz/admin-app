@@ -96,4 +96,87 @@ const userRows = [
   },
 ];
 
-export { userData, userRows };
+const productRows = [
+  {
+    id: 1,
+    name: "Asus Laptop",
+    stock: 4,
+    image:
+      "https://laptopaz.vn/media/lib/1692_Asus-ROG-Strix-G15-G512-IAL013T3.jpg",
+    price: "$235",
+  },
+  {
+    id: 2,
+    name: "Apple Watch",
+    stock: 6,
+    image:
+      "https://images.pexels.com/photos/393047/pexels-photo-393047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    price: "$300",
+  },
+  {
+    id: 3,
+    name: "Iphone 11",
+    stock: 3,
+    image:
+      "https://images.pexels.com/photos/5081399/pexels-photo-5081399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    price: "$250",
+  },
+  {
+    id: 4,
+    name: "IPhone 12",
+    stock: 7,
+    image:
+      "https://images.pexels.com/photos/5750001/pexels-photo-5750001.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    price: "$200",
+  },
+  {
+    id: 5,
+    name: "Gigabyte Speakers",
+    stock: 18,
+    image:
+      "https://images.pexels.com/photos/2651794/pexels-photo-2651794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    price: "$320",
+  },
+  {
+    id: 6,
+    name: "Alexa",
+    stock: 9,
+    image:
+      "https://images.pexels.com/photos/4790255/pexels-photo-4790255.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    price: "$170",
+  },
+  {
+    id: 7,
+    name: "Marshall Headphones",
+    stock: 20,
+    image:
+      "https://images.pexels.com/photos/324672/pexels-photo-324672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    price: "$275",
+  },
+  {
+    id: 8,
+    name: "White Headphones",
+    stock: 17,
+    image:
+      "https://images.pexels.com/photos/3394656/pexels-photo-3394656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    price: "$310",
+  },
+  {
+    id: 9,
+    name: "Airpods",
+    stock: 12,
+    image:
+      "https://images.pexels.com/photos/3921870/pexels-photo-3921870.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    price: "$200",
+  },
+  {
+    id: 10,
+    name: "Asus Laptop",
+    stock: 6,
+    image:
+      "https://laptopaz.vn/media/lib/1692_Asus-ROG-Strix-G15-G512-IAL013T3.jpg",
+    price: "$200",
+  },
+];
+
+export { userData, userRows, productRows };

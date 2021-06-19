@@ -1,0 +1,12 @@
+.product-list {
+  flex: 4;
+  width: 100%;
+  background-color: rgb(252, 248, 247);
+}
+
+@include responsive($small-break) {
+  .product-list {
+    height: calc(100vh - 64px);
+    overflow-x: auto;
+  }
+}

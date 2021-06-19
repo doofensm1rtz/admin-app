@@ -5,19 +5,14 @@ import NewUser from "./pages/NewUser";
 import Navbar from "./components/Navbar";
 import SidebarContainer from "./components/sidebars/SidebarContainer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useState } from "react";
+import ProductList from "./pages/ProductList";
 
 function App() {
-  const [isSidebarOpened, setIsSidebarOpened] = useState(false);
-
   return (
     <Router>
-      <Navbar
-        isSidebarOpened={isSidebarOpened}
-        setIsSidebarOpened={setIsSidebarOpened}
-      />
+      <Navbar />
       <div className="main-container">
-        <SidebarContainer isSidebarOpened={isSidebarOpened} />
+        <SidebarContainer />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -30,6 +25,9 @@ function App() {
           </Route>
           <Route path="/newUser">
             <NewUser />
+          </Route>
+          <Route path="/products">
+            <ProductList />
           </Route>
         </Switch>
       </div>

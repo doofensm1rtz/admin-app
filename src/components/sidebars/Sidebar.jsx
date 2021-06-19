@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 export default function Sidebar() {
   const { currentPage, dispatch } = useContext(Context);
   const updateCurrentPage = (pageName) => {
-    dispatch({ type: "SET_SIDEBAR_STATE", payload: pageName });
+    dispatch({ type: "SET_SIDEBAR_PAGE", payload: pageName });
   };
 
   return (
@@ -86,17 +86,22 @@ export default function Sidebar() {
                 <span className="sidebar-list-item-text">Users</span>
               </li>
             </Link>
-            <li
-              className={`sidebar-list-item ${
-                currentPage === "products" ? "active" : ""
-              }`}
+            <Link
+              to="/products"
+              className="react-link"
               onClick={() => {
                 updateCurrentPage("products");
               }}
             >
-              <StorefrontRounded className="material-icon-sidebar" />
-              <span className="sidebar-list-item-text">Products</span>
-            </li>
+              <li
+                className={`sidebar-list-item ${
+                  currentPage === "products" ? "active" : ""
+                }`}
+              >
+                <StorefrontRounded className="material-icon-sidebar" />
+                <span className="sidebar-list-item-text">Products</span>
+              </li>
+            </Link>
             <li
               className={`sidebar-list-item ${
                 currentPage === "transactions" ? "active" : ""

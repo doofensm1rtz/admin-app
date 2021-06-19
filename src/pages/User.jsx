@@ -7,9 +7,13 @@ import {
   CloudUploadRounded,
 } from "@material-ui/icons";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function User() {
+  const location = useLocation();
+  const { name, email, avatar } = location.state;
+  const username = name.toLowerCase().replace(" ", "") + "99";
+
   return (
     <div className="user">
       <div className="user-title-container">
@@ -21,13 +25,9 @@ export default function User() {
       <div className="user-main-container">
         <div className="user-display">
           <div className="user-display-top">
-            <img
-              src="https://images.unsplash.com/photo-1528234591865-8c4f372b3f2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-              alt=""
-              className="user-display-image"
-            />
+            <img src={avatar} alt="" className="user-display-image" />
             <div className="user-display-top-info">
-              <span className="user-display-username">Aldair Vagas</span>
+              <span className="user-display-username">{name}</span>
               <span className="user-display-usertitle">Software Engineer</span>
             </div>
           </div>
@@ -35,7 +35,7 @@ export default function User() {
             <span className="user-display-bottom-title">Account details</span>
             <div className="user-display-bottom-info">
               <PersonRounded className="user-display-bottom-icon" />
-              <span>aldairvagas99</span>
+              <span>{username}</span>
             </div>
             <div className="user-display-bottom-info">
               <CalendarTodayRounded className="user-display-bottom-icon" />
@@ -48,7 +48,7 @@ export default function User() {
             </div>
             <div className="user-display-bottom-info">
               <EmailRounded className="user-display-bottom-icon" />
-              <span>aldairvagas@gmail.com</span>
+              <span>{email}</span>
             </div>
             <div className="user-display-bottom-info">
               <LocationOnRounded className="user-display-bottom-icon" />
@@ -62,11 +62,11 @@ export default function User() {
             <div className="user-update-left">
               <form className="user-update-form">
                 <label>Username</label>
-                <input type="text" placeholder="aldairvagas99" />
+                <input type="text" placeholder={username} />
                 <label>Full name</label>
-                <input type="text" placeholder="Aldair Vagas" />
+                <input type="text" placeholder={name} />
                 <label>Email</label>
-                <input type="email" placeholder="aldairvagas@gmail.com" />
+                <input type="email" placeholder={email} />
                 <label>Phone</label>
                 <input type="text" placeholder="+91 9283718291" />
                 <label>Address</label>
@@ -74,11 +74,7 @@ export default function User() {
               </form>
             </div>
             <div className="user-update-right">
-              <img
-                src="https://images.unsplash.com/photo-1528234591865-8c4f372b3f2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-                alt=""
-                className="user-update-image"
-              />
+              <img src={avatar} alt="" className="user-update-image" />
               <button className="user-upload-image-btn">
                 <label htmlFor="update-image-upload">
                   <CloudUploadRounded className="user-upload-image-icon" />

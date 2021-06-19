@@ -1,7 +1,8 @@
 import Notifications from "../components/modals/Notifications";
 import Messages from "../components/modals/Messages";
 import useWindowDimensions from "../lib/custom-hooks/useWindowDimensions";
-import { useState } from "react";
+import { Context } from "../context/Context";
+import { useContext, useState } from "react";
 import {
   ChatBubbleOutline,
   NotificationsNoneRounded,
@@ -10,10 +11,11 @@ import {
   CloseRounded,
 } from "@material-ui/icons";
 
-export default function Navbar({ isSidebarOpened, setIsSidebarOpened }) {
+export default function Navbar() {
   const [showNotification, setShowNotification] = useState(false);
   const [showMessages, setShowMessages] = useState(false);
   const { width } = useWindowDimensions();
+  const { isSidebarOpen, dispatch } = useContext(Context);
 
   return (
     <>
@@ -22,14 +24,21 @@ export default function Navbar({ isSidebarOpened, setIsSidebarOpened }) {
           {width > 780 ? (
             <div className="navbar-left">react-dashboard</div>
           ) : (
-            <div
-              className="navbar-left-mobile"
-              onClick={() => setIsSidebarOpened(!isSidebarOpened)}
-            >
-              {!isSidebarOpened ? (
-                <MenuRounded className="navbar-left-mobile-icon" />
+            <div className="navbar-left-mobile">
+              {!isSidebarOpen ? (
+                <MenuRounded
+                  className="navbar-left-mobile-icon"
+                  onClick={() =>
+                    dispatch({ type: "SET_SIDEBAR_STATE", payload: true })
+                  }
+                />
               ) : (
-                <CloseRounded className="navbar-left-mobile-icon" />
+                <CloseRounded
+                  className="navbar-left-mobile-icon"
+                  onClick={() =>
+                    dispatch({ type: "SET_SIDEBAR_STATE", payload: false })
+                  }
+                />
               )}
             </div>
           )}

@@ -15,14 +15,16 @@ import {
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
-export default function MobileSidebar({ isSidebarOpened }) {
-  const { currentPage, dispatch } = useContext(Context);
+export default function MobileSidebar() {
+  const { currentPage, isSidebarOpen, dispatch } = useContext(Context);
   const updateCurrentPage = (pageName) => {
-    dispatch({ type: "SET_SIDEBAR_STATE", payload: pageName });
+    dispatch({ type: "SET_SIDEBAR_PAGE", payload: pageName });
+    dispatch({ type: "SET_SIDEBAR_STATE", payload: false });
   };
+
   return (
     <>
-      {isSidebarOpened && (
+      {isSidebarOpen && (
         <div className="mobile-sidebar">
           <div className="mobile-sidebar-wrapper">
             <div className="mobile-sidebar-menu">
@@ -89,19 +91,27 @@ export default function MobileSidebar({ isSidebarOpened }) {
                     <span className="mobile-sidebar-list-item-text">Users</span>
                   </li>
                 </Link>
-                <li
-                  className={`mobile-sidebar-list-item ${
-                    currentPage === "products" ? "active" : ""
-                  }`}
+                <Link
+                  to="/products"
+                  className="react-link"
                   onClick={() => {
                     updateCurrentPage("products");
                   }}
                 >
-                  <StorefrontRounded className="material-icon-mobile-sidebar" />
-                  <span className="mobile-sidebar-list-item-text">
-                    Products
-                  </span>
-                </li>
+                  <li
+                    className={`mobile-sidebar-list-item ${
+                      currentPage === "products" ? "active" : ""
+                    }`}
+                    onClick={() => {
+                      updateCurrentPage("products");
+                    }}
+                  >
+                    <StorefrontRounded className="material-icon-mobile-sidebar" />
+                    <span className="mobile-sidebar-list-item-text">
+                      Products
+                    </span>
+                  </li>
+                </Link>
                 <li
                   className={`mobile-sidebar-list-item ${
                     currentPage === "transactions" ? "active" : ""

@@ -13,7 +13,7 @@ export default function SimplePieChart() {
   return (
     <div className="chart-pie">
       <h2 className="chart-title">Weekly sales</h2>
-      <ResponsiveContainer width="100%" aspect={1.5 / 1}>
+      <ResponsiveContainer width="99%" aspect={3 / 2}>
         <PieChart>
           <text
             x="50%"
