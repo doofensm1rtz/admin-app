@@ -43,17 +43,22 @@ export default function Sidebar() {
                 <span className="sidebar-list-item-text">Home</span>
               </li>
             </Link>
-            <li
-              className={`sidebar-list-item ${
-                currentPage === "analytics" ? "active" : ""
-              }`}
+            <Link
+              className="react-link"
+              to="/analytics"
               onClick={() => {
                 updateCurrentPage("analytics");
               }}
             >
-              <TimelineRounded className="material-icon-sidebar" />
-              <span className="sidebar-list-item-text">Analytics</span>
-            </li>
+              <li
+                className={`sidebar-list-item ${
+                  currentPage === "analytics" ? "active" : ""
+                }`}
+              >
+                <TimelineRounded className="material-icon-sidebar" />
+                <span className="sidebar-list-item-text">Analytics</span>
+              </li>
+            </Link>
             <li
               className={`sidebar-list-item ${
                 currentPage === "sales" ? "active" : ""

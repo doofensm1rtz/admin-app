@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import SidebarContainer from "./components/sidebars/SidebarContainer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProductList from "./pages/ProductList";
+import Analytics from "./pages/Analytics";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/products">
             <ProductList />
+          </Route>
+          <Route path="/analytics">
+            <Analytics />
           </Route>
         </Switch>
       </div>

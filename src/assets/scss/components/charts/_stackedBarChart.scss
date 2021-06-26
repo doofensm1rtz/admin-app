@@ -1,0 +1,16 @@
+.chart {
+  &-stacked-bar {
+    padding: 14px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: $card-box-shadow;
+  }
+}
+
+@include responsive($small-break) {
+  .chart {
+    &-stacked-bar {
+      margin: 0 20px 20px 20px;
+    }
+  }
+}

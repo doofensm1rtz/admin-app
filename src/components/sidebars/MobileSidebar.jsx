@@ -46,19 +46,24 @@ export default function MobileSidebar() {
                     <span className="mobile-sidebar-list-item-text">Home</span>
                   </li>
                 </Link>
-                <li
-                  className={`mobile-sidebar-list-item ${
-                    currentPage === "analytics" ? "active" : ""
-                  }`}
+                <Link
+                  className="react-link"
+                  to="/analytics"
                   onClick={() => {
                     updateCurrentPage("analytics");
                   }}
                 >
-                  <TimelineRounded className="material-icon-mobile-sidebar" />
-                  <span className="mobile-sidebar-list-item-text">
-                    Analytics
-                  </span>
-                </li>
+                  <li
+                    className={`mobile-sidebar-list-item ${
+                      currentPage === "analytics" ? "active" : ""
+                    }`}
+                  >
+                    <TimelineRounded className="material-icon-mobile-sidebar" />
+                    <span className="mobile-sidebar-list-item-text">
+                      Analytics
+                    </span>
+                  </li>
+                </Link>
                 <li
                   className={`mobile-sidebar-list-item ${
                     currentPage === "sales" ? "active" : ""

@@ -179,4 +179,104 @@ const productRows = [
   },
 ];
 
-export { userData, userRows, productRows };
+const analyticsBarChartRows = [
+  {
+    month: "Jan",
+    mobile: 54,
+    desktop: 69,
+  },
+  {
+    month: "Feb",
+    mobile: 66,
+    desktop: 67,
+  },
+  {
+    month: "Mar",
+    mobile: 41,
+    desktop: 24,
+  },
+  {
+    month: "Apr",
+    mobile: 55,
+    desktop: 48,
+  },
+  {
+    month: "May",
+    mobile: 52,
+    desktop: 62,
+  },
+  {
+    month: "Jun",
+    mobile: 75,
+    desktop: 62,
+  },
+  {
+    month: "Jul",
+    mobile: 68,
+    desktop: 72,
+  },
+  {
+    month: "Aug",
+    mobile: 34,
+    desktop: 78,
+  },
+  {
+    month: "Sep",
+    mobile: 89,
+    desktop: 56,
+  },
+  {
+    month: "Oct",
+    mobile: 64,
+    desktop: 65,
+  },
+  {
+    month: "Nov",
+    mobile: 76,
+    desktop: 42,
+  },
+  {
+    month: "Dec",
+    mobile: 32,
+    desktop: 43,
+  },
+];
+
+const smallWidgetRows = [
+  {
+    name: "Emily Garland",
+    title: "Photographer",
+    email: "emilygarland@gmail.com",
+    avatar:
+      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  },
+  {
+    name: "Masha Raymers",
+    title: "Engineer",
+    email: "masharaymers@gmail.com",
+    avatar:
+      "https://images.pexels.com/photos/1499327/pexels-photo-1499327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  },
+  {
+    name: "Rodrigo Souza",
+    title: "Photographer",
+    email: "rodrigosouza@gmail.com",
+    avatar:
+      "https://images.pexels.com/photos/2531553/pexels-photo-2531553.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  },
+  {
+    name: "Andrea Piacquadio",
+    title: "Business",
+    email: "andreapiacquadio@gmail.com",
+    avatar:
+      "https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  },
+];
+
+export {
+  userData,
+  userRows,
+  productRows,
+  analyticsBarChartRows,
+  smallWidgetRows,
+};

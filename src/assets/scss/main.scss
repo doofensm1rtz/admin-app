@@ -19,6 +19,7 @@
 @import "components/featured";
 @import "components/charts/simpleLineChart";
 @import "components/charts/simplePieChart";
+@import "components/charts/stackedBarChart";
 @import "components/widgets/widgetSmall";
 @import "components/widgets/widgetLarge";
 @import "components/modals/modals";
@@ -28,3 +29,4 @@
 @import "pages/user";
 @import "pages/newUser";
 @import "pages/productList";
+@import "pages/analytics";

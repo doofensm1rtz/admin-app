@@ -13,30 +13,35 @@ export default function SimplePieChart() {
   return (
     <div className="chart-pie">
       <h2 className="chart-title">Weekly sales</h2>
-      <ResponsiveContainer width="99%" aspect={3 / 2}>
+      <ResponsiveContainer
+        width="99%"
+        height={250}
+        minWidth={undefined}
+        minHeight={undefined}
+      >
         <PieChart>
           <text
             x="50%"
-            y="44%"
+            y="42%"
             textAnchor="middle"
             dominantBaseline="middle"
-            style={{ fontSize: "18px", color: "#1eb980 !important" }}
+            style={{ fontSize: "16px", color: "#1eb980 !important" }}
           >
             +27%
           </text>
           <text
             x="50%"
-            y="54%"
+            y="50%"
             textAnchor="middle"
             dominantBaseline="middle"
-            style={{ fontSize: "14px" }}
+            style={{ fontSize: "12px" }}
           >
             more sales
           </text>
           <Pie
             data={data}
             cx="50%"
-            cy="50%"
+            cy="45%"
             innerRadius="70%"
             outerRadius="78%"
             fill="#8884d8"

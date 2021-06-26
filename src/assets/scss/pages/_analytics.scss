@@ -1,0 +1,269 @@
+.analytics {
+  flex: 4;
+  padding: 20px;
+  width: 100%;
+  background-color: rgb(252, 248, 247);
+
+  &-top {
+    display: flex;
+
+    &-left {
+      flex: 2;
+      display: flex;
+      flex-wrap: wrap;
+
+      &-item {
+        flex: 1;
+        background-color: #fff;
+        color: rgba(0, 0, 0, 0.87);
+        margin: 0 20px 20px 20px;
+        padding: 14px;
+        border-radius: 8px;
+        box-shadow: $card-box-shadow;
+        cursor: pointer;
+      }
+
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          font-weight: 500;
+          font-size: 16px;
+        }
+
+        span {
+          background-color: $primary-light;
+          font-size: 10px;
+          color: $white;
+          padding: 2px 4px;
+          border-radius: 4px;
+        }
+        margin-bottom: 20px;
+      }
+
+      &-number {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+
+      &-change {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+
+        p {
+          color: #555;
+        }
+
+        span {
+          color: rgb(76, 175, 80);
+          background-color: rgba(76, 175, 80, 0.1);
+          margin-right: 10px;
+          font-weight: 500;
+          padding: 3px;
+          border-radius: 4px;
+
+          &.analytics-negative {
+            color: rgb(244, 67, 54);
+            background-color: rgba(244, 67, 54, 0.1);
+          }
+        }
+      }
+    }
+
+    &-right {
+      flex: 3;
+    }
+  }
+
+  &-middle {
+    display: flex;
+
+    &-left {
+      flex: 3;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      border: $card-box-shadow;
+      margin-left: 14px;
+    }
+
+    &-right {
+      flex: 2;
+      background-color: #fff;
+      border-radius: 8px;
+      border: $card-box-shadow;
+      margin-left: 14px;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    margin-top: 20px;
+
+    &-title {
+      font-size: 18px;
+    }
+
+    &-left {
+      flex: 2;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      border: $card-box-shadow;
+      margin-left: 14px;
+
+      &-table {
+        margin-top: 14px;
+        width: 100%;
+        border-spacing: 0 20px;
+
+        thead th {
+          text-align: left;
+          font-size: 13px;
+          font-weight: 500;
+          border-bottom: 1px solid $grey;
+          padding-bottom: 14px;
+        }
+
+        tbody {
+          td {
+            font-size: 13px;
+            border-bottom: 1px solid $grey;
+            padding-bottom: 18px;
+          }
+        }
+      }
+    }
+
+    &-right {
+      flex: 3;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      border: $card-box-shadow;
+      margin-left: 14px;
+
+      &-table {
+        margin-top: 14px;
+        width: 100%;
+        border-spacing: 0 20px;
+
+        thead th {
+          text-align: left;
+          font-size: 13px;
+          font-weight: 500;
+          border-bottom: 1px solid $grey;
+          padding-bottom: 14px;
+
+          &:not(:nth-of-type(1)) {
+            text-align: right;
+          }
+        }
+
+        tbody {
+          td {
+            font-size: 13px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid $grey;
+          }
+
+          tr td {
+            &:not(:nth-of-type(1)) {
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      &-btn {
+        padding: 3px 12px;
+        font-weight: 600;
+        font-size: 12px;
+        border: none;
+        border-radius: 6px;
+        color: $white;
+        background-color: $rally-green;
+
+        &.bg-danger {
+          background-color: $red;
+        }
+      }
+    }
+  }
+}
+
+.percentage-block {
+  height: 14px;
+  width: 100%;
+  background-color: #eee;
+  border-radius: 4px;
+
+  &-child {
+    width: 0;
+    height: 100%;
+    border-radius: 4px 0 0 4px;
+    background-color: $primary-light;
+
+    &-65 {
+      width: 65%;
+    }
+
+    &-45 {
+      width: 45%;
+    }
+
+    &-35 {
+      width: 35%;
+    }
+
+    &-40 {
+      width: 40%;
+    }
+
+    &-30 {
+      width: 30%;
+    }
+
+    &-20 {
+      width: 20%;
+    }
+  }
+}
+
+@include responsive($big-break) {
+  .analytics {
+    &-top {
+      flex-direction: column;
+
+      &-left {
+        flex-direction: column;
+      }
+    }
+
+    &-middle {
+      flex-direction: column;
+
+      &-left,
+      &-right {
+        margin: 0 20px 20px 20px;
+      }
+    }
+
+    &-bottom {
+      flex-direction: column;
+
+      &-left,
+      &-right {
+        margin: 0 20px 20px 20px;
+      }
+
+      &-right {
+        overflow-x: auto;
+      }
+    }
+  }
+}
